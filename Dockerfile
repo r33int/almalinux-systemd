@@ -29,7 +29,7 @@ RUN dnf -y install rpm dnf-plugins-core \
  && dnf clean all
 
 # Create nonroot user and enable passwordless sudo.
-RUN useradd -m -g sudo -s /bin/bash $USER
+RUN useradd -m -g wheel -s /bin/bash $USER
 RUN echo "$USER ALL=(ALL:ALL) NOPASSWD: ALL" | sudo tee /etc/sudoers.d/$USER
 
 # Disable requiretty.
