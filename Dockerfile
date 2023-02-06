@@ -1,4 +1,4 @@
-ARG VERSION=8
+ARG VERSION=9
 
 FROM almalinux:${VERSION}
 LABEL maintainer="HIFIS (https://www.hifis.net)"
